@@ -1,0 +1,17 @@
+<div>
+    <button (click)="realizarAjax('http://localhost:3000/cursos')">Carregar resultado via HttpClient get()</button>
+    
+    <div id="mostraResultados" style="display: none">
+        <table>
+            <tr *ngFor="let item of this.resultAPIrequest">
+                <td>{{ item.id }}</td>
+                <td>{{ item.nome }}</td>
+            </tr>
+        </table>
+    </div>     
+
+    <div id="semResultados" style="display: none">
+        Sem resultados busca
+    </div>    
+    
+</div>
